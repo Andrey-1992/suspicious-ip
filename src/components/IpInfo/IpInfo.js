@@ -5,9 +5,8 @@ import IpForm from '../IpForm/IpForm';
 import { fetchLocalIp, fetchAllExternalIp, fetchFieldExternalIp } from '../../utils';
 
 const IpInfo = () => {
-  const [localIp, setLocalIp] = useState({});
   const [requestIpAll, setRequestIpAll] = useState({});
-  const [requestIpField, setRequestIpField] = useState({});
+  const [requestIpField, setRequestIpField] = useState('');
 
   useEffect(() => {
     getLocalIpInfo()
@@ -15,32 +14,28 @@ const IpInfo = () => {
 
   const getLocalIpInfo = () => {
     return fetchLocalIp()
-    .then(data => setLocalIp(data))
-    .then(setRequestIpAll({}))
-    // .then(console.log(localIp))
+    .then(data => setRequestIpAll(data))
+    .then(setRequestIpField(''))
   }
 
   const getRequestedIpInfo = (ipAddress, ipField) => {
     if(ipField) {
       return fetchFieldExternalIp(ipAddress, ipField)
       .then(data => setRequestIpField(data))
-      .then(setLocalIp({}))
-      .then(console.log(requestIpField))
+      .then(setRequestIpAll({}))
+      // .then(console.log(requestIpField))
     }
     
     return fetchAllExternalIp(ipAddress)
-    // .then(data => console.log('test data:', data))
     .then(data => setRequestIpAll(data))
-    .then(setLocalIp({}))
-    // .then(console.log('test request all:',requestIpAll))
+    .then(setRequestIpField(''))
   }
 
   return  (
     <div className="ipInfo">
       <h2 className='ipInfo'>IpInfo</h2>
       <IpForm getRequestedIpInfo={getRequestedIpInfo}/>
-      {!requestIpAll ? <IpCard ip={requestIpAll}/> : <IpCard ip={localIp} />}
-      {requestIpField && <IpCard ip={requestIpField} />}
+      {requestIpField ? <IpCard ip={requestIpField} /> : <IpCard ip={requestIpAll} />}
     </div>
   )
 }
