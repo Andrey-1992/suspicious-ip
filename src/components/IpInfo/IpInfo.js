@@ -17,21 +17,22 @@ const IpInfo = () => {
     return fetchLocalIp()
     .then(data => setLocalIp(data))
     .then(setRequestIpAll({}))
-    .then(console.log(localIp))
+    // .then(console.log(localIp))
   }
 
   const getRequestedIpInfo = (ipAddress, ipField) => {
-    if(!ipField) {
-      return fetchAllExternalIp(ipAddress)
-      .then(data => setRequestIpAll(data))
+    if(ipField) {
+      return fetchFieldExternalIp(ipAddress, ipField)
+      .then(data => setRequestIpField(data))
       .then(setLocalIp({}))
-      .then(console.log(requestIpAll))
+      .then(console.log(requestIpField))
     }
     
-    return fetchFieldExternalIp(ipAddress, ipField)
-    .then(data => setRequestIpField(data))
+    return fetchAllExternalIp(ipAddress)
+    // .then(data => console.log('test data:', data))
+    .then(data => setRequestIpAll(data))
     .then(setLocalIp({}))
-    .then(console.log(requestIpField))
+    // .then(console.log('test request all:',requestIpAll))
   }
 
   return  (
