@@ -17,7 +17,7 @@ const IpInfo = () => {
   const getLocalIpInfo = () => {
     return fetchLocalIp()
     .then(data => setRequestIpAll(data))
-    // .then(setRequestIpField(''))
+    .then(setIpField(null))
   }
 
   const getRequestedIpInfo = (ipAddress, ipFieldInfo) => {
