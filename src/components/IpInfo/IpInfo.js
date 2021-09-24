@@ -2,6 +2,7 @@ import './IpInfo.css';
 import React, { useState, useEffect } from 'react';
 import IpCard from '../IpCard/IpCard';
 import IpForm from '../IpForm/IpForm';
+import { fetchLocalIp } from '../../util';
 
 const IpInfo = () => {
     const [localIp, setLocalIp] = useState('');
