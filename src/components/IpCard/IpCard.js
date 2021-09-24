@@ -1,10 +1,19 @@
 import './IpCard.css'
 import React from 'react';
 import Loader from '../Loader/Loader';
+import IpCardField from '../IpCardField/IpCardField';
 
-const IpCard = ({ip}) => {
+const IpCard = ({ip, ipField}) => {
+  console.log(ipField)
+
+
   if (!ip) {
     return (<Loader />)
+  } else if (ipField !== 'all') {
+    console.log(ip[ipField])
+    return (
+      <IpCardField field={ipField}  ipField={ip[ipField]}/>
+    )
   }
   return (
     <div className="single-card">
@@ -27,7 +36,7 @@ const IpCard = ({ip}) => {
       <p>ASN: {!ip.asn ? 'No info requested' : ip.asn}</p>
       <p>Organization: {!ip.org ? 'No info requested' : ip.org}</p>
     </div>
-  );
+  )
 }
 
 export default IpCard;

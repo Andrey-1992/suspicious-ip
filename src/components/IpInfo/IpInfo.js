@@ -7,7 +7,8 @@ import { fetchLocalIp, fetchAllExternalIp, fetchFieldExternalIp } from '../../ut
 
 const IpInfo = () => {
   const [requestIpAll, setRequestIpAll] = useState({});
-  const [requestIpField, setRequestIpField] = useState('');
+  const [requestIpField, setRequestIpField] = useState("");
+  const [ipField, setIpField] = useState("");
 
   useEffect(() => {
     getLocalIpInfo()
@@ -19,32 +20,42 @@ const IpInfo = () => {
     // .then(setRequestIpField(''))
   }
 
-  const getRequestedIpInfo = (ipAddress, ipField) => {
-    console.log('fetch ip:', ipAddress)
-    console.log('fetch field:', ipField)
-    // console.log('requestIpField:', requestIpField)
-    if(ipField === "all") {
+  const getRequestedIpInfo = (ipAddress, ipFieldInfo) => {
       return fetchAllExternalIp(ipAddress)
       .then(data => setRequestIpAll(data))
-      .then(setRequestIpField(''))
-    } 
-    
-    return fetchFieldExternalIp(ipAddress, ipField)
-    .then(data => console.log('test fetch for filed data:', data))
-    .then(data => setRequestIpField(data))
-    .then(console.log('requested field', requestIpField))
-    // .then(setRequestIpAll({}))
+      .then(setIpField(ipFieldInfo))
+      // .then(setRequestIpField(''))
   }
 
+  // const getRequestedIpInfo = (ipAddress, ipField) => {
+  //   if(ipField === "all") {
+  //     return fetchAllExternalIp(ipAddress)
+  //     .then(data => setRequestIpAll(data))
+  //     // .then(setRequestIpField(''))
+  //   } 
+
+  //   return fetchAllExternalIp(ipAddress, ipField)
+  //   .then(data => setRequestIpField(data[ipField]))
+  //   .then(data => console.log(data))  
+  //   // .then(setRequestIpField('test2'))
+  //   .then(console.log(requestIpField))    
+  // }
+  
   return  (
     <div className="ipInfo">
       <h2 className='ipInfo'>IpInfo</h2>
       <IpForm getRequestedIpInfo={getRequestedIpInfo}/>
       {/* <IpCardField field={requestIpField} /> */}
-      {/* <IpCard ip={requestIpField} /> */}
-      {requestIpField ? <IpCardField filed={requestIpField} /> : <IpCard ip={requestIpAll} />}
+      <IpCard ip={requestIpAll} ipField={ipField}/>
+      {/* {requestIpField ? <IpCardField filed={requestIpField} /> : <IpCard ip={requestIpAll} />} */}
     </div>
   )
 }
 
 export default IpInfo;
+
+// return fetchFieldExternalIp(ipAddress, ipField)
+// .then(data => console.log('test fetch for filed data:', data))
+// .then(data => setRequestIpField(data))
+// .then(console.log('requested field', requestIpField))
+// // .then(setRequestIpAll({}))
