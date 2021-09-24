@@ -16,6 +16,7 @@ const IpInfo = () => {
   const getLocalIpInfo = () => {
     return fetchLocalIp()
     .then(data => setLocalIp(data))
+    .then(setRequestIpAll({}))
     .then(console.log(localIp))
   }
 
@@ -23,11 +24,13 @@ const IpInfo = () => {
     if(!ipField) {
       return fetchAllExternalIp(ipAddress)
       .then(data => setRequestIpAll(data))
+      .then(setLocalIp({}))
       .then(console.log(requestIpAll))
     }
     
     return fetchFieldExternalIp(ipAddress, ipField)
     .then(data => setRequestIpField(data))
+    .then(setLocalIp({}))
     .then(console.log(requestIpField))
   }
 
@@ -35,7 +38,8 @@ const IpInfo = () => {
     <div className="ipInfo">
       <h2 className='ipInfo'>IpInfo</h2>
       <IpForm getRequestedIpInfo={getRequestedIpInfo}/>
-      <IpCard ip={localIp} />
+      {!requestIpAll ? <IpCard ip={requestIpAll}/> : <IpCard ip={localIp} />}
+      {requestIpField && <IpCard ip={requestIpField} />}
     </div>
   )
 }
