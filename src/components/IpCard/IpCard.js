@@ -1,10 +1,16 @@
-import React from 'react';
 import './IpCard.css'
+import React from 'react';
+import Loader from '../Loader/Loader';
 
-const IpCard = () => {
-    return  (
-        <h2 className='ipCard'>IpCard</h2>
-    )
+const IpCard = ({ip}) => {
+  if (!ip) {
+    return (<Loader />)
+  }
+  return (
+    <div className="single-card">
+      <p>Ip Card</p>
+    </div>
+  );
 }
 
 export default IpCard;
