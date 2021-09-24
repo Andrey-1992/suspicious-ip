@@ -8,7 +8,7 @@ const IpCard = ({ip}) => {
   }
   return (
     <div className="single-card">
-      <p>IP: {!ip.ip ? 'No info requested' : ip.ip</p>
+      <p>IP: {!ip.ip ? 'No info requested' : ip.ip}</p>
       <p>Version: {!ip.version ? 'No info requested' : ip.version}</p>
       <p>City: {!ip.city ? 'No info requested' : ip.city}</p>
       <p>Region: {!ip.region ? 'No info requested' : ip.region}</p>
