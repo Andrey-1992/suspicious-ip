@@ -8,7 +8,7 @@ const IpCard = ({ip}) => {
   }
   return (
     <div className="single-card">
-      <p>Ip Card</p>
+      <p>{ip}</p>
     </div>
   );
 }
