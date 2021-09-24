@@ -1,10 +1,15 @@
 import './Nav.css';
+import { NavLink } from 'react-router-dom';
 
 function Nav() {
   return (
     <div className="nav">
-      <button>Home</button>
-      <button>Saved IPs</button>
+      <NavLink className='go-home' to="/">
+        <button>Home</button>
+      </NavLink>
+      <NavLink className='go-saved-ips' to="/saved-ip">
+        <button>Saved IPs</button>
+      </NavLink>
     </div>
   );
 }
