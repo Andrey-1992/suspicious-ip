@@ -5,24 +5,27 @@ const IpForm = ({getRequestedIpInfo}) => {
 
   const [ipAddress, setIpAddress] = useState("");
   const [ipField, setIpField] = useState("");
-  const ipFieldsContainer = [{Name:'All', Value:'all'}, {Name:'Ip', Value:'ip'}, {Name:'Version', Value:'version'}, 
+  const ipFieldsContainer = [
+  {Name:'Select a field', Value:''}, {Name:'All', Value:'all'}, {Name:'Ip', Value:'ip'}, {Name:'Version', Value:'version'}, 
   {Name:'City', Value:'city'}, {Name:'Region', Value:'region'}, {Name:'Country Name', Value:'country_name'},
   {Name:'Country Code', Value:'country_code'}, {Name:'Country Capital', Value:'country_capital'}, 
   {Name:'Country Calling Code', Value:'country_calling_code'}, {Name:'Country Area', Value:'country_area'},
   {Name:'Country Population', Vlaue:'country_population'}, {Name:'Country Postal', Value:'postal'},
   {Name:'Latitude', Value:'latitude'}, {Name:'Longitude', Value:'longitude'},{Name:'Timezone', Value:'timezone'},
-  {Name:'Currency', Value:'currency_name'}, {Name:'Languages', Values:'languages'}, {Name:'ASN', Value:'asn'}, {Name:'Organization', Value:'org'}]
+  {Name:'Currency', Value:'currency_name'}, {Name:'Languages', Values:'languages'}, {Name:'ASN', Value:'asn'}, 
+  {Name:'Organization', Value:'org'}]
 
   const searchIp = (event) => {
     event.preventDefault();
-    console.log(ipAddress);
-    console.log(ipField);
-    getRequestedIpInfo(ipAddress);
+    // console.log(ipAddress);
+    // console.log(ipField);
+    getRequestedIpInfo(ipAddress, ipField);
     clearInputs();
   }
 
   const clearInputs = () => {
-    setIpAddress("")
+    setIpAddress("");
+    setIpField("");
   }
 
   return (
@@ -34,11 +37,6 @@ const IpForm = ({getRequestedIpInfo}) => {
         value={ipAddress}
         onChange={(event) => setIpAddress(event.target.value)}
       />
-      <input
-        type="radio"
-        value="city"
-        onChange={(event) => setIpField(event.target.value)}
-       /> City
       <select onChange={(event) => setIpField(event.target.value)}>
         {ipFieldsContainer.map(list => (
           <option value={list.Value}>
@@ -52,3 +50,9 @@ const IpForm = ({getRequestedIpInfo}) => {
 }
 
 export default IpForm;
+
+{/* <input
+  type="radio"
+  value="city"
+  onChange={(event) => setIpField(event.target.value)}
+ /> City */}

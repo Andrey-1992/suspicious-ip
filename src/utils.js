@@ -19,7 +19,7 @@ const fetchAllExternalIp = async (ipAddress) => {
       throw Error('Error fetching local IP Info')
     }
     const data = await response.json()
-    console.log('test fetch all:', data)
+    // console.log('test fetch all:', data)
     return data
   } catch(err) {
     console.log(err.message)
@@ -33,7 +33,8 @@ const fetchFieldExternalIp = async (ipAddress, ipField) => {
     if (!response.ok || response.status === 500) {
       throw Error('Error fetching local IP Info')
     }
-    const data = await response.json()
+    const data = await response.text()
+    // console.log('test fetch field:', data)
     return data
   } catch(err) {
     console.log(err.message)
