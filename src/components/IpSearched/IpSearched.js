@@ -1,11 +1,11 @@
-import './IpInfo.css';
+import './IpSearched.css';
 import React, { useState, useEffect } from 'react';
 import IpCard from '../IpCard/IpCard';
 import IpCardField from '../IpCardField/IpCardField';
 import IpForm from '../IpForm/IpForm';
 import { fetchLocalIp, fetchAllExternalIp, fetchFieldExternalIp } from '../../utils';
 
-const IpInfo = () => {
+const IpSearched = () => {
   const [requestIpAll, setRequestIpAll] = useState({});
   const [requestIpField, setRequestIpField] = useState("");
   const [ipField, setIpField] = useState("");
@@ -52,7 +52,7 @@ const IpInfo = () => {
   )
 }
 
-export default IpInfo;
+export default IpSearched;
 
 // return fetchFieldExternalIp(ipAddress, ipField)
 // .then(data => console.log('test fetch for filed data:', data))

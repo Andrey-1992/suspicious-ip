@@ -1,7 +1,5 @@
 .nav {
   background: #7a5523;
-  padding: 5%;
-  /* display:flex; */
-  /* flex-direction: column; */
-  /* margin-left: 60%; */
+  padding: 2%;
+  display: grid;
 }
