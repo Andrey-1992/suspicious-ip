@@ -4,7 +4,7 @@ import Nav from '../Nav/Nav';
 function Header() {
   return (
     <div className="header">
-      <h1>Suspicious iP</h1>
+      <h1>Suspicious IP</h1>
       <Nav />
     </div>
   );

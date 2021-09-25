@@ -1,0 +1,14 @@
+
+.header {
+  display: flex;
+  /* align-items: flex-end; */
+  align-items: center;
+  justify-content: space-between;
+  border: solid black 2px;
+}
+
+h1 {
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 335%;
+  padding-left: 1%;
+}

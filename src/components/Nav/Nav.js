@@ -7,6 +7,12 @@ function Nav() {
       <NavLink className='go-home' to="/">
         <button>Home</button>
       </NavLink>
+      <NavLink className='go-local-ip' to="/about">
+        <button>Local IP</button>
+      </NavLink>
+      <NavLink className='go-search-ip' to="/about">
+        <button>Search IP</button>
+      </NavLink>
       <NavLink className='go-saved-ips' to="/saved-ip">
         <button>Saved IPs</button>
       </NavLink>
