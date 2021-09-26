@@ -4,15 +4,12 @@ import Loader from '../Loader/Loader';
 import IpCardField from '../IpCardField/IpCardField';
 
 const IpCard = ({ip, ipField}) => {
-  console.log(ipField)
-  if (!ip && !ipField) {
-    return (<Loader />)
-  } else if (ipField !== 'all') {
-    console.log(ip[ipField])
+  if (ipField) {
+    // console.log(ip[ipField])
     return (
       <IpCardField field={ipField}  ipField={ip[ipField]}/>
     )
-  } else if (ip && !ipField) {
+  } else if (ipField === "all") {
     return (
       <div className="single-card">
         <p>IP: {!ip.ip ? 'No info requested' : ip.ip}</p>

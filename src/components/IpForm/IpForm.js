@@ -17,8 +17,8 @@ const IpForm = ({getRequestedIpInfo}) => {
 
   const searchIp = (event) => {
     event.preventDefault();
-    // console.log(ipAddress);
-    // console.log(ipField);
+    console.log(ipAddress);
+    console.log(ipField);
     getRequestedIpInfo(ipAddress, ipField);
     clearInputs();
   }
@@ -50,9 +50,3 @@ const IpForm = ({getRequestedIpInfo}) => {
 }
 
 export default IpForm;
-
-{/* <input
-  type="radio"
-  value="city"
-  onChange={(event) => setIpField(event.target.value)}
- /> City */}

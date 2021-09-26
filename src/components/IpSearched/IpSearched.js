@@ -3,51 +3,26 @@ import React, { useState, useEffect } from 'react';
 import IpCard from '../IpCard/IpCard';
 import IpCardField from '../IpCardField/IpCardField';
 import IpForm from '../IpForm/IpForm';
-import { fetchLocalIp, fetchAllExternalIp, fetchFieldExternalIp } from '../../utils';
+import { fetchAllExternalIp } from '../../utils';
 
 const IpSearched = () => {
-  const [requestIpAll, setRequestIpAll] = useState({});
-  const [requestIpField, setRequestIpField] = useState("");
+  const [test, setTest] = useState({});
+  const [requestIpInfo, setRequestIpInfo] = useState({});
   const [ipField, setIpField] = useState("");
 
-  useEffect(() => {
-    getLocalIpInfo()
-  }, [])
-
-  const getLocalIpInfo = () => {
-    return fetchLocalIp()
-    .then(data => setRequestIpAll(data))
-    .then(setIpField(null))
-  }
-
+  
   const getRequestedIpInfo = (ipAddress, ipFieldInfo) => {
-      return fetchAllExternalIp(ipAddress)
-      .then(data => setRequestIpAll(data))
-      .then(setIpField(ipFieldInfo))
-      // .then(setRequestIpField(''))
+    return fetchAllExternalIp(ipAddress)
+    .then(data => setRequestIpInfo(data))
+    .then(setIpField(ipFieldInfo))
+    .then(console.log("test1:", ipField, requestIpInfo))
   }
-
-  // const getRequestedIpInfo = (ipAddress, ipField) => {
-  //   if(ipField === "all") {
-  //     return fetchAllExternalIp(ipAddress)
-  //     .then(data => setRequestIpAll(data))
-  //     // .then(setRequestIpField(''))
-  //   } 
-
-  //   return fetchAllExternalIp(ipAddress, ipField)
-  //   .then(data => setRequestIpField(data[ipField]))
-  //   .then(data => console.log(data))  
-  //   // .then(setRequestIpField('test2'))
-  //   .then(console.log(requestIpField))    
-  // }
   
   return  (
     <div className="ipInfo">
       <h2 className='ipInfo'>IpInfo</h2>
       <IpForm getRequestedIpInfo={getRequestedIpInfo}/>
-      {/* <IpCardField field={requestIpField} /> */}
-      <IpCard ip={requestIpAll} ipField={ipField}/>
-      {/* {requestIpField ? <IpCardField filed={requestIpField} /> : <IpCard ip={requestIpAll} />} */}
+      {!requestIpInfo && <IpCard ip={requestIpInfo} ipField={ipField}/>}
     </div>
   )
 }
@@ -59,3 +34,12 @@ export default IpSearched;
 // .then(data => setRequestIpField(data))
 // .then(console.log('requested field', requestIpField))
 // // .then(setRequestIpAll({}))
+// useEffect(() => {
+//   getExternalIpInfo()
+// }, [])
+
+// const getExternalIpInfo = (ipAddress, ipField) => {
+//   return fetchAllExternalIp ()
+//   .then(data => setRequestIpInfo(data))
+//   .then(setIpField(null))
+// }
