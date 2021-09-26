@@ -1,8 +1,8 @@
 .single-card {
-  /* margin-top: 7%; */
-  border: 2px solid black;
+  margin-top: 3%;
+  border: 5px solid #dad891;
   border-radius: 10%;
-  width: 100%;
+  width: 110%;
   height: 90%;
   /* text-align: justify; */
   /* display: flex;
@@ -10,5 +10,23 @@
   justify-content: center; */
   /* background-color: rgb(254, 254, 254); */
   background: whitesmoke;
-  opacity: 0.75;
+  opacity: 0.80;
+  text-align:left;
 }
+
+.single-card:hover {
+  opacity: 0.93;
+  transform: scale(1.01);
+  transition: 0.4s ease-in-out;
+}
+
+.ip-card-text {
+  margin-left: 5%;
+  font-family:'Times New Roman', Times, serif;
+  font-size: 110%;
+  margin: 3% 3% 3% 5%;
+}
+
+/* p {
+  margin: 3%;
+} */
