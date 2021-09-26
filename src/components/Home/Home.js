@@ -2,8 +2,14 @@ import './Home.css';
 
 function Home() {
   return (
-    <div className="home">
-      <p>App information and home introduction</p>
+    <div className="home-view">
+      <h2 className="about-header">Welcome !</h2>
+      <p className="about-text">This app will allow you to generate a report with 
+        information from a local or unidentified IP Addresses 
+        in their networks, with the possiblity to save those 
+        reports in the app.</p>
+        <p className="about-text">This app is using 
+          <a href="https://ipapi.co/api/#introduction" target="_blank"> ipapi </a> API </p>
     </div>
   );
 }

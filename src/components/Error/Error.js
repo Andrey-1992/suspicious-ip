@@ -1,12 +1,15 @@
-import React from 'react'
-import './Error.css'
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import './Error.css';
 
 const Error = () => {
-    return (
-        <div className='error'>
-                <img className="error-img" src="https://files.muzli.space/43e6e439756832db0ff5dd2b76ffef5c.jpeg" alt="404-img"/>
-        </div>
-    )
+  return (
+    <div className='error'>
+      <NavLink className='go-back-home' to='/'>
+        <img src="https://cdn4.vectorstock.com/i/1000x1000/39/98/error-404-page-not-found-vector-14463998.jpg" alt="404-img"/>
+      </NavLink>
+    </div>
+)
 }
 
 export default Error;
