@@ -2,15 +2,16 @@ import './IpCardField.css'
 import React from 'react';
 import Loader from '../Loader/Loader';
 
-const IpCardField = ({field, ipField}) => {
+const IpCardField = ({field, ipField, ipAddress}) => {
   if (!field) {
     return (<Loader />)
   }
   return (
     <div className="single-card-field">
-      <p>IP Field Requested:</p>
-      <p>{field}:</p>
-      <p>{ipField}</p>
+      <h2>IP Field Requested:</h2>
+      <h3>{field}:</h3>
+      <h4>{ipField}</h4>
+      <h4>IP #: {ipAddress}</h4>
     </div>
   );
 }

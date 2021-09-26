@@ -1,15 +1,9 @@
 import './IpCard.css'
 import React from 'react';
-import Loader from '../Loader/Loader';
 import IpCardField from '../IpCardField/IpCardField';
 
-const IpCard = ({ip, ipField}) => {
-  if (ipField) {
-    // console.log(ip[ipField])
-    return (
-      <IpCardField field={ipField}  ipField={ip[ipField]}/>
-    )
-  } else if (ipField === "all") {
+const IpCard = ({ip, ipField, ipAddress}) => {
+  if (ipField === "all") {
     return (
       <div className="single-card">
         <p>IP: {!ip.ip ? 'No info requested' : ip.ip}</p>
@@ -32,7 +26,14 @@ const IpCard = ({ip, ipField}) => {
         <p>Organization: {!ip.org ? 'No info requested' : ip.org}</p>
       </div>
     )
+  } else if (ipField) {
+    return (
+      <IpCardField field={ipField}  ipField={ip[ipField]} ipAddress={ipAddress}/>
+    )
   }
+    return (
+      <p>Type an IP Address and select a filter field.</p>
+    )
 }
 
 export default IpCard;

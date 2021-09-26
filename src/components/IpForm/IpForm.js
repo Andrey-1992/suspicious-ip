@@ -17,8 +17,6 @@ const IpForm = ({getRequestedIpInfo}) => {
 
   const searchIp = (event) => {
     event.preventDefault();
-    console.log(ipAddress);
-    console.log(ipField);
     getRequestedIpInfo(ipAddress, ipField);
     clearInputs();
   }
