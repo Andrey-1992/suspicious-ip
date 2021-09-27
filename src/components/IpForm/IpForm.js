@@ -1,5 +1,6 @@
 import './IpForm.css'
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 
 const IpForm = ({getRequestedIpInfo}) => {
   const [ipAddress, setIpAddress] = useState("");
@@ -45,6 +46,15 @@ const IpForm = ({getRequestedIpInfo}) => {
       <p className="form-text">Type an IP Address and select a filter field.</p>
     </form>
   )
+}
+
+IpForm.propTypes = {
+  ipAddress: PropTypes.string,
+  ipField: PropTypes.string,
+  ipFieldsContainer: PropTypes.array,
+  searchIp: PropTypes.func,
+  clearInputs: PropTypes.func,
+  getRequestedIpInfo: PropTypes.func
 }
 
 export default IpForm;
