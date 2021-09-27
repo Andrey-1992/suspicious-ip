@@ -12,6 +12,7 @@ const IpCardField = ({field, ipField, ipAddress}) => {
       <h3>{field}:</h3>
       <h4>{ipField}</h4>
       <h4>IP #: {ipAddress}</h4>
+      <button className="saved-button-field">Save <i class="fas fa-hdd"></i></button>
     </div>
   );
 }

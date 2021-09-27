@@ -1,0 +1,45 @@
+.single-card-field {
+  margin-top: 15%;
+  border: 5px solid #dad891;
+  border-radius: 10%;
+  width: 112%;
+  background: whitesmoke;
+  opacity: 0.80;
+  text-align:center;
+  font-family: monospace;
+  font-size: 150%;
+}
+
+.single-card-field:hover {
+  opacity: 0.93;
+  transform: scale(1.1);
+  transition: 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+h2:hover {
+  opacity: 0.40;
+  cursor: pointer;
+  transform: scale(1.2);
+  transition: 0.4s ease-in-out;
+}
+
+h3:hover {
+  opacity: 0.40;
+  cursor: pointer;
+  transform: scale(1.2);
+  transition: 0.4s ease-in-out;
+}
+
+h4:hover {
+  opacity: 0.40;
+  cursor: pointer;
+  transform: scale(1.2);
+  transition: 0.4s ease-in-out;
+}
+
+.saved-button-field {
+  padding: 2%;
+  margin: 2%;
+  font-family: monospace;
+}

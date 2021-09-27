@@ -26,6 +26,7 @@ const IpCardInfo = ({ip}) => {
       <p className="ip-card-text"><i class="fas fa-language"></i> <b>Languages:</b> <i>{ip.languages}</i></p>
       <p className="ip-card-text"><i class="fas fa-barcode"></i> <b>ASN:</b> <i>{ip.asn}</i></p>
       <p className="ip-card-text"><i class="fas fa-sitemap"></i> <b>Organization:</b> <i>{ip.org}</i></p>
+      <button className="saved-button">Save <i class="fas fa-hdd"></i></button>
     </div>
   )
 }

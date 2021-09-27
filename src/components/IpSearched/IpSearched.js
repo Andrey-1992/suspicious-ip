@@ -21,7 +21,7 @@ const IpSearched = () => {
   return  (
     <div className="ipInfo">
       <IpForm getRequestedIpInfo={getRequestedIpInfo}/>
-      <IpCard ip={requestIpInfo} ipField={ipField} ipAddress={ipAddress}/>
+      {requestIpInfo && <IpCard ip={requestIpInfo} ipField={ipField} ipAddress={ipAddress}/>}
     </div>
   )
 }

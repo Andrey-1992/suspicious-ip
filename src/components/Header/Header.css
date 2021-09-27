@@ -1,10 +1,9 @@
 
 .header {
   display: flex;
-  /* align-items: flex-end; */
   align-items: center;
   justify-content: space-between;
-  border: solid black 2px;
+  /* border: solid #dad891 1px; */
   background-color: whitesmoke;
 }
 
@@ -12,4 +11,5 @@ h1 {
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 335%;
   padding-left: 1%;
+  /* padding-top: 1%; */
 }
