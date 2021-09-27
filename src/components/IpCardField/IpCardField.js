@@ -8,7 +8,7 @@ const IpCardField = ({field, ipField, ipAddress}) => {
   }
   return (
     <div className="single-card-field">
-      <h2>IP Field Requested:</h2>
+      <h2 className="header-field">IP Field Requested:</h2>
       <h3>{field}:</h3>
       <h4>{ipField}</h4>
       <h4>IP #: {ipAddress}</h4>

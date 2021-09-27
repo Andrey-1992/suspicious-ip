@@ -10,14 +10,10 @@ const IpCard = ({ip, ipField, ipAddress}) => {
         <IpCardInfo ip={ip}/>
       </div>
     )
-  } else if (ipField) {
-    return (
-      <IpCardField field={ipField}  ipField={ip[ipField]} ipAddress={ipAddress}/>
-    )
-  }
-    return (
-      <p>Type an IP Address and select a filter field.</p>
-    )
+  } 
+  return (
+    <IpCardField field={ipField}  ipField={ip[ipField]} ipAddress={ipAddress}/>
+  )
 }
 
 export default IpCard;

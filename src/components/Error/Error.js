@@ -5,8 +5,8 @@ import './Error.css';
 const Error = () => {
   return (
     <div className='error'>
-      <NavLink className='go-back-home' to='/'>
-        <img src="https://cdn4.vectorstock.com/i/1000x1000/39/98/error-404-page-not-found-vector-14463998.jpg" alt="404-img"/>
+      <NavLink to='/'>
+        <img className='error-img' src="https://img.freepik.com/free-vector/404-error-page-found-lamp-broken-background_114341-57.jpg?size=626&ext=jpg" alt="404-img"/>
       </NavLink>
     </div>
 )
