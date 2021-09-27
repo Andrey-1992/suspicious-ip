@@ -27,7 +27,7 @@ const IpForm = ({getRequestedIpInfo}) => {
   }
 
   return (
-    <form>
+    <form className="ip-form-component">
       <input
         type="text"
         placeholder="IP Address"
