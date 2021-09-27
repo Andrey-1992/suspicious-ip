@@ -1,9 +1,10 @@
 .single-card {
-  margin-top: 3%;
+  margin-top: 20%;
+  margin-left: -20%;
   border: 5px solid #dad891;
   border-radius: 10%;
-  width: 110%;
-  height: 90%;
+  width: 160%;
+  height: 105%;
   background: whitesmoke;
   opacity: 0.80;
   text-align:left;

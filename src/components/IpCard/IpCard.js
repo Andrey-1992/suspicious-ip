@@ -18,7 +18,7 @@ const IpCard = ({ip, ipField, ipAddress, saveToStorage}) => {
 }
 
 IpCard.propTypes = {
-  ip: PropTypes.string,
+  ip: PropTypes.object,
   ipField: PropTypes.string,
   ipAddress: PropTypes.string,
   saveToStorage: PropTypes.func,

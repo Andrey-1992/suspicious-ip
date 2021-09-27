@@ -39,7 +39,7 @@ const IpSavedCard = ({ip, deleteFromStorage}) => {
 }
 
 IpSavedCard.propTypes = {
-  ip: PropTypes.string,
+  ip: PropTypes.object,
   deleteFromStorage: PropTypes.func,
   matchIp: PropTypes.func,
   Loader: PropTypes.element
