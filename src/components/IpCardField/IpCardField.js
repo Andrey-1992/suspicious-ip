@@ -23,6 +23,7 @@ IpCardField.propTypes = {
   ipField: PropTypes.string,
   ipAddress: PropTypes.string,
   saveToStorage: PropTypes.func,
+  Loader: PropTypes.element
 }
 
 export default IpCardField;

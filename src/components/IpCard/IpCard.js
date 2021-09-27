@@ -22,6 +22,8 @@ IpCard.propTypes = {
   ipField: PropTypes.string,
   ipAddress: PropTypes.string,
   saveToStorage: PropTypes.func,
+  IpCardInfo: PropTypes.element,
+  IpCardField: PropTypes.element,
 }
 
 export default IpCard;
