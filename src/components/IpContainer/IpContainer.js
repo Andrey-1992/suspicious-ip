@@ -12,42 +12,35 @@ const IpContainer = () => {
 
   const retrieveFromStorage = () => {
     const getStoredPosts = Object.keys(localStorage).map(ipData => {
-        return JSON.parse(localStorage.getItem(ipData.props))
-    // console.log(ipData)
+        return JSON.parse(localStorage.getItem(ipData))
     })
     setIpCardsData(getStoredPosts);
-    console.log(ipCardsData);
-    createIpCards(getStoredPosts)
+    createIpCards(ipCardsData);
   }
     
   const deleteFromStorage = (data) => {
     localStorage.removeItem(data.ip)
+    console.log(data, "data in container")
   }
 
-  const saveToStorage = () => {
-    console.log('test ')
-  }
-
-  const createIpCards = (getStoredPosts) => {
-    const cardsContainer = getStoredPosts.map(info => {
+  const createIpCards = (ipCardsData) => {
+    const cardsContainer = ipCardsData.map(info => {
       return (
-        <IpSavedCard ip={info} />
+        <IpSavedCard ip={info} deleteFromStorage={deleteFromStorage}/>
        )
     })
-    console.log("test cardsContainer:", cardsContainer)
     return (
-        <IpSavedCard ip={getStoredPosts}/>
+      <Carousel>
+        {cardsContainer}
+      </Carousel>
     )
   }
 
   return  (
-    <h2 className='ipContainer'>IpContainer</h2>
+    <div className="saved-cards-container">
+      {ipCardsData ? createIpCards(ipCardsData) : <p className="no-saved-cards">No saved IPs so far !</p>}
+    </div>
   )
 }
 
 export default IpContainer;
-
-   //   <Carousel>
-        {/* {cardsContainer.map(card => card)} */}
-        // <IpCardInfo ip={getStoredPosts[0]} saveToStorage={saveToStorage}/>
-    //   </Carousel>

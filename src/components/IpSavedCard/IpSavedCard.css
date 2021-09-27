@@ -1,0 +1,36 @@
+.single-saved-card {
+  margin-top: 1%;
+  border: 5px solid #dad891;
+  border-radius: 10%;
+  width: 110%;
+  height: 90%;
+  background: whitesmoke;
+  opacity: 0.80;
+  text-align:left;
+}
+
+.single-saved-card:hover {
+  opacity: 0.93;
+  transform: scale(1.01);
+  transition: 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+.ip-saved-card-text {
+  margin-left: 5%;
+  font-family:'Times New Roman', Times, serif;
+  font-size: 110%;
+  padding: -2%;
+  margin: 3% 3% 3% 5%;
+}
+
+.ip-saved-card-text:hover {
+  opacity: 0.50;
+  cursor: pointer;
+}
+
+.delete-button {
+  margin-left: 35%;
+  padding: 2%;
+  font-family: monospace;
+}
