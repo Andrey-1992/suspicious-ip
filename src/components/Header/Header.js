@@ -1,4 +1,5 @@
 import './Header.css';
+import PropTypes from 'prop-types';
 import Nav from '../Nav/Nav';
 
 function Header() {
@@ -8,6 +9,10 @@ function Header() {
       <Nav />
     </div>
   );
+}
+
+Header.propTypes = {
+  Nav: PropTypes.element
 }
 
 export default Header;
