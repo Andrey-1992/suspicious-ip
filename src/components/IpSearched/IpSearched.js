@@ -30,9 +30,9 @@ const IpSearched = () => {
   
   return  (
     <div className="ipInfo">
-      <IpForm getRequestedIpInfo={getRequestedIpInfo} key={ipAddress + Date.now()}/>
+      <IpForm getRequestedIpInfo={getRequestedIpInfo} />
        {ipAddress && <IpCard ip={requestIpInfo} ipField={ipField} ipAddress={ipAddress} saveToStorage={saveToStorage} key={ipAddress + Date.now()}/>}
-       {completedRequest && <h2 className="bad-ip-request">Please fill out all the required fields</h2>}
+       {/* {completedRequest && <h2 className="bad-ip-request">Please fill out all the required fields</h2>} */}
     </div>
   )
 }
