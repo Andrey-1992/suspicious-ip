@@ -14,10 +14,14 @@ const IpLocal = () => {
     return fetchLocalIp()
     .then(data => setRequestLocalIp(data))
   }
+
+  const saveToStorage = () => {
+    localStorage.setItem(requestLocalIp.ip, JSON.stringify(requestLocalIp))
+  }
   
   return  (
     <div className="ip-card-info">
-      <IpCardInfo ip={requestLocalIp}/>
+      <IpCardInfo ip={requestLocalIp} saveToStorage={saveToStorage}/>
     </div>
   )
 }
