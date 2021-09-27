@@ -1,5 +1,5 @@
 import './IpSearched.css';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import IpCard from '../IpCard/IpCard';
 import IpForm from '../IpForm/IpForm';
 import { fetchAllExternalIp } from '../../utils';
