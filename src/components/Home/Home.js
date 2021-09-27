@@ -1,5 +1,5 @@
 import './Home.css';
-
+import PropTypes from 'prop-types';
 function Home() {
   return (
     <div className="home-view">
@@ -12,6 +12,10 @@ function Home() {
           <a href="https://ipapi.co/api/#introduction" target="_blank"> ipapi </a> API </p>
     </div>
   );
+}
+
+Home.propTypes = {
+  Home: PropTypes.element,
 }
 
 export default Home;

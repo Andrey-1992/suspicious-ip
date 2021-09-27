@@ -2,6 +2,7 @@ import './IpContainer.css'
 import React, { useState, useEffect } from 'react';
 import IpSavedCard from '../IpSavedCard/IpSavedCard';
 import Carousel from 'react-elastic-carousel';
+import PropTypes from 'prop-types';
 
 const IpContainer = () => {
   const [ipCardsData, setIpCardsData] = useState([]);
@@ -19,8 +20,9 @@ const IpContainer = () => {
   }
     
   const deleteFromStorage = (data) => {
-    // localStorage.removeItem(data.ip)
-    console.log(data, "data in container")
+    localStorage.removeItem(data)
+    retrieveFromStorage()
+    // console.log(data, "data in container")
   }
 
   const createIpCards = (ipCardsData) => {
@@ -41,6 +43,14 @@ const IpContainer = () => {
       {ipCardsData ? createIpCards(ipCardsData) : <p className="no-saved-cards">No saved IPs so far !</p>}
     </div>
   )
+}
+
+IpContainer.propTypes = {
+  ipCardsData: PropTypes.array,
+  retrieveFromStorage: PropTypes.func,
+  deleteFromStorage: PropTypes.func,
+  createIpCards: PropTypes.func,
+  IpSavedCard: PropTypes.element
 }
 
 export default IpContainer;

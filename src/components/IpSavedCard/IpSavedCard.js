@@ -1,6 +1,7 @@
 import './IpSavedCard.css'
 import React from 'react';
 import Loader from '../Loader/Loader';
+import PropTypes from 'prop-types';
 
 const IpSavedCard = ({ip, deleteFromStorage}) => {
   
@@ -35,6 +36,13 @@ const IpSavedCard = ({ip, deleteFromStorage}) => {
     </div>
     
   )
+}
+
+IpSavedCard.propTypes = {
+  ip: PropTypes.string,
+  deleteFromStorage: PropTypes.func,
+  matchIp: PropTypes.func,
+  Loader: PropTypes.element
 }
   
 export default IpSavedCard;

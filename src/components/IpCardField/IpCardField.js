@@ -1,6 +1,7 @@
 import './IpCardField.css'
 import React from 'react';
 import Loader from '../Loader/Loader';
+import PropTypes from 'prop-types';
 
 const IpCardField = ({field, ipField, ipAddress, saveToStorage}) => {
   if (!field) {
@@ -15,6 +16,14 @@ const IpCardField = ({field, ipField, ipAddress, saveToStorage}) => {
       <button className="saved-button-field" onClick={saveToStorage}>Save <i class="fas fa-hdd"></i></button>
     </div>
   );
+}
+
+IpCardField.propTypes = {
+  field: PropTypes.string,
+  ipField: PropTypes.string,
+  ipAddress: PropTypes.string,
+  saveToStorage: PropTypes.func,
+  Loader: PropTypes.element
 }
 
 export default IpCardField;
