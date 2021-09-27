@@ -12,7 +12,7 @@ describe('Saved IP view dashboard user flow', () => {
     cy.get('.saved-cards-container').should('be.visible')
   }) 
 
-  it('Local IP should have an card incremenetion when you hover over it', () => {
+  it('Saved IP should have an card incremenetion when you hover over it', () => {
     cy.get('.saved-cards-container').trigger('mouseover')
   })
 
