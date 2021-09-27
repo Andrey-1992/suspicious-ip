@@ -23,8 +23,8 @@ This is a project based on Turing School of Software and Design **[Showcase Fina
 
 <details>
   <Summary>Home View</summary>
-  - Is the welcome page for the users
-  - Explain the features in the navigation bar and possibilities to accomplish the app
+   Is the welcome page for the users.
+   Explain the features in the navigation bar and possibilities to accomplish the app.
 </details>
 
 ### Local IP
