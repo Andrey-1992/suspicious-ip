@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 function Nav() {
   return (
     <div className="nav">
-      <NavLink className='go-home' to="/">
+      <NavLink className='go-home' to="/suspicious-ip">
         <p className="nav-buttons">Home</p>
       </NavLink>
       <NavLink className='go-local-ip' to="local-ip">

@@ -14,7 +14,7 @@ function App() {
       <Header />
       <main className="main-section">
         <Switch>
-          <Route exact path="/" render={() => <Home />}/>
+          <Route exact path="/suspicious-ip" render={() => <Home />}/>
           <Route exact path="/local-ip" render={() => <IpLocal />}/>
           <Route exact path="/searched-ip" render={() => <IpSearched />}/>
           <Route exact path="/saved-ip" render={() => <IpContainer />}/>

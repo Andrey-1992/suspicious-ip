@@ -6,7 +6,7 @@ import './Error.css';
 const Error = () => {
   return (
     <div className='error'>
-      <NavLink to='/'>
+      <NavLink to='/suspicious-ip'>
         <img className='error-img' src="https://img.freepik.com/free-vector/404-error-page-found-lamp-broken-background_114341-57.jpg?size=626&ext=jpg" alt="404-img"/>
       </NavLink>
     </div>
