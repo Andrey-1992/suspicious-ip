@@ -18,9 +18,11 @@ This is a project based on Turing School of Software and Design **[Showcase Fina
 * [Local IP](#local-ip)
 * [Search IP](#search-ip)
 * [Saves IPs](#saved-ips)
+* * [Accessibility](#accessibility)
 
 ### Home View
-<img width="1405" alt="Screen Shot 2021-09-27 at 9 20 31 AM" src="https://user-images.githubusercontent.com/78002374/134938272-77a24588-9827-4947-94c6-6d3272ae0738.png">
+<img width="1427" alt="Screen Shot 2021-09-27 at 5 41 35 PM" src="https://user-images.githubusercontent.com/78002374/134999733-78c946be-013c-470b-aea4-e231e8ded547.png">
+
 
 
 <details>
@@ -30,7 +32,8 @@ This is a project based on Turing School of Software and Design **[Showcase Fina
 </details>
 
 ### Local IP
-<img width="1420" alt="Screen Shot 2021-09-27 at 9 21 58 AM" src="https://user-images.githubusercontent.com/78002374/134938549-148e879f-8bfa-4ed1-8f8e-7da9a9fc6d8b.png">
+
+<img width="1429" alt="Screen Shot 2021-09-27 at 5 41 50 PM" src="https://user-images.githubusercontent.com/78002374/134999760-0deaa76f-0e5d-4094-a3b0-74769bdaf7c5.png">
 
 
 <details>
@@ -41,7 +44,8 @@ This is a project based on Turing School of Software and Design **[Showcase Fina
 </details>
 
 ### Search IP
-<img width="1417" alt="Screen Shot 2021-09-27 at 9 23 19 AM" src="https://user-images.githubusercontent.com/78002374/134939662-a552ae81-ce03-4c52-bed0-fa5c237cf2e5.png">
+<img width="1433" alt="Screen Shot 2021-09-27 at 5 42 29 PM" src="https://user-images.githubusercontent.com/78002374/134999822-5385bbce-f3f3-42f2-962b-861ef6867c41.png">
+
 
 <details>
   <Summary>Search IP</summary>
@@ -51,13 +55,18 @@ This is a project based on Turing School of Software and Design **[Showcase Fina
 </details>
 
 ### Saved IPs
-<img width="1417" alt="Screen Shot 2021-09-27 at 9 23 19 AM" src="https://user-images.githubusercontent.com/78002374/134939662-a552ae81-ce03-4c52-bed0-fa5c237cf2e5.png">
+<img width="1433" alt="Screen Shot 2021-09-27 at 5 42 05 PM" src="https://user-images.githubusercontent.com/78002374/134999833-6216879a-4ef3-4c06-8be3-50a9a4598b7c.png">
+
 
 <details>
   <Summary>Saved IPs</summary>
   This window will create a carousel of saved IP address. | 
   Gives you the opportunuty to delete IP card report.
 </details>
+
+### Accessibility
+<img width="570" alt="Screen Shot 2021-09-27 at 10 19 55 AM" src="https://user-images.githubusercontent.com/78002374/134999869-08ada582-7303-4d3a-9d35-51310bc62ddd.png">
+
 
 
 
