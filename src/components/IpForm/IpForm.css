@@ -1,0 +1,23 @@
+form {
+  margin-top: 3%;
+  border: 3px solid #dad891;
+  border-radius: 5%;
+  padding: 7%;
+  width: 100%;
+  background: whitesmoke;
+  opacity: 0.80;
+  text-align:left;
+}
+
+form:hover {
+  opacity: 0.93;
+  transform: scale(1.1);
+  transition: 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+.form-text {
+  text-align: center;
+  font-size: 100%;
+  font-family: monospace;
+}

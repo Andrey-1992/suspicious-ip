@@ -1,0 +1,13 @@
+.nav {
+  display: flex;
+  /* border: 5px solid #dad891; */
+  flex-direction:row;
+  padding: 1%;
+  justify-content: space-around;
+  /* display: grid; */
+  width: 50%;
+}
+
+.nav-buttons {
+  /* margin: 0% 70% 0% 10%; */
+}

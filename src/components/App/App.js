@@ -1,8 +1,10 @@
 import './App.css';
 import { Route, Switch } from 'react-router-dom';
-import IpInfo from '../IpInfo/IpInfo';
-import IpContainer from '../IpContainer/IpContainer';
 import Header from '../Header/Header';
+import Home from '../Home/Home';
+import IpLocal from '../IpLocal/IpLocal';
+import IpSearched from '../IpSearched/IpSearched';
+import IpContainer from '../IpContainer/IpContainer';
 import Error from '../Error/Error';
 
 function App() {
@@ -11,7 +13,9 @@ function App() {
       <Header />
       <main className="main-section">
         <Switch>
-          <Route exact path="/" render={() => <IpInfo />}/>
+          <Route exact path="/" render={() => <Home />}/>
+          <Route exact path="/local-ip" render={() => <IpLocal />}/>
+          <Route exact path="/searched-ip" render={() => <IpSearched />}/>
           <Route exact path="/saved-ip" render={() => <IpContainer />}/>
           <Route path="*" render={() => <Error />}/>
         </Switch>
