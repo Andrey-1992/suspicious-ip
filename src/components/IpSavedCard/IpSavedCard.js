@@ -3,6 +3,7 @@ import React from 'react';
 import Loader from '../Loader/Loader';
 
 const IpSavedCard = ({ip, deleteFromStorage}) => {
+  
   const matchIp = () => {
     deleteFromStorage(ip.ip)
   }

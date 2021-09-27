@@ -16,8 +16,11 @@ const IpSearched = () => {
     .then(data => setRequestIpInfo(data))
     .then(setIpField(ipFieldInfo))
     .then(setIpAddress(ipAddress))
-    .then(error => setCompletedRequest(true))
     .then(error => console.log(error))
+
+    if (!requestIpInfo) {
+      setCompletedRequest(true)
+    }
   }
 
   const saveToStorage = () => {

@@ -19,7 +19,7 @@ const IpContainer = () => {
   }
     
   const deleteFromStorage = (data) => {
-    localStorage.removeItem(data.ip)
+    // localStorage.removeItem(data.ip)
     console.log(data, "data in container")
   }
 
