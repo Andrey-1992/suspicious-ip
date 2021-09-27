@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
 import './IpForm.css'
+import React, { useState } from 'react';
 
 const IpForm = ({getRequestedIpInfo}) => {
-
   const [ipAddress, setIpAddress] = useState("");
   const [ipField, setIpField] = useState("");
   const ipFieldsContainer = [
