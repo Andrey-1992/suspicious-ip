@@ -16,7 +16,7 @@ const IpLocal = () => {
   }
   
   return  (
-    <div className="local-ip-info">
+    <div className="ip-card-info">
       <IpCardInfo ip={requestLocalIp}/>
     </div>
   )

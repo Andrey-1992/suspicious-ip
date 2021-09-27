@@ -4,11 +4,6 @@
   border-radius: 10%;
   width: 110%;
   height: 90%;
-  /* text-align: justify; */
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center; */
-  /* background-color: rgb(254, 254, 254); */
   background: whitesmoke;
   opacity: 0.80;
   text-align:left;
@@ -18,6 +13,7 @@
   opacity: 0.93;
   transform: scale(1.01);
   transition: 0.4s ease-in-out;
+  cursor: pointer;
 }
 
 .ip-card-text {
@@ -27,6 +23,7 @@
   margin: 3% 3% 3% 5%;
 }
 
-/* p {
-  margin: 3%;
-} */
+.ip-card-text:hover {
+  opacity: 0.50;
+  font-size: 115%;
+}

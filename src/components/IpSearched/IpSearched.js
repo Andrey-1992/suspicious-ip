@@ -20,7 +20,6 @@ const IpSearched = () => {
   
   return  (
     <div className="ipInfo">
-      <h2 className='ipInfo'>IpInfo</h2>
       <IpForm getRequestedIpInfo={getRequestedIpInfo}/>
       <IpCard ip={requestIpInfo} ipField={ipField} ipAddress={ipAddress}/>
     </div>

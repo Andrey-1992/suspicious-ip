@@ -43,6 +43,7 @@ const IpForm = ({getRequestedIpInfo}) => {
         ))}
       </select>
       <button onClick={searchIp}>SUBMIT</button>
+      <p className="form-text">Type an IP Address and select a filter field.</p>
     </form>
   )
 }
