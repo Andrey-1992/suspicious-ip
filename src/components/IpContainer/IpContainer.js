@@ -20,8 +20,8 @@ const IpContainer = () => {
   }
     
   const deleteFromStorage = (data) => {
-    // localStorage.removeItem(data.ip)
-    console.log(data, "data in container")
+    localStorage.removeItem(data)
+    // console.log(data, "data in container")
   }
 
   const createIpCards = (ipCardsData) => {
