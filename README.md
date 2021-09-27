@@ -23,8 +23,8 @@ This is a project based on Turing School of Software and Design **[Showcase Fina
 
 <details>
   <Summary>Home View</summary>
-   * Is the welcome page for the users.
-   * Explain the features in the navigation bar and possibilities to accomplish the app.
+   Is the welcome page for the users. | 
+   Explain the features in the navigation bar and possibilities to accomplish the app.
 </details>
 
 ### Local IP
@@ -33,9 +33,9 @@ This is a project based on Turing School of Software and Design **[Showcase Fina
 
 <details>
   <Summary>Local IP</summary>
-  - When you move to Local Ip window: will generate a global report of your IP information
-  - Use a geolocation API to generate a report of your IP status.
-  - Gives you the opportunuty to save the IP card report.
+  When you move to Local Ip window: will generate a global report of your IP information | 
+  Use a geolocation API to generate a report of your IP status. | 
+  Gives you the opportunuty to save the IP card report.
 </details>
 
 ### Search IP
@@ -43,9 +43,9 @@ This is a project based on Turing School of Software and Design **[Showcase Fina
 
 <details>
   <Summary>Search IP</summary>
-  - In order to generate a report from an external IP, you will nees to fill out the form.
-  - Type the IP Address and select a field that you would like to specify. 
-  - Gives you the opportunuty to save the IP card report.
+  In order to generate a report from an external IP, you will nees to fill out the form. | 
+  Type the IP Address and select a field that you would like to specify. | 
+  Gives you the opportunuty to save the IP card report.
 </details>
 
 ### Saved IPs
@@ -53,8 +53,8 @@ This is a project based on Turing School of Software and Design **[Showcase Fina
 
 <details>
   <Summary>Saved IPs</summary>
-  - This window will create a carousel of saved IP address.
-  - Gives you the opportunuty to delete IP card report.
+  This window will create a carousel of saved IP address. | 
+  Gives you the opportunuty to delete IP card report.
 </details>
 
 
