@@ -3,11 +3,11 @@ import React from 'react';
 import IpCardField from '../IpCardField/IpCardField';
 import IpCardInfo from '../IpCardInfo/IpCardInfo';
 
-const IpCard = ({ip, ipField, ipAddress}) => {
+const IpCard = ({ip, ipField, ipAddress, saveToStorage}) => {
   if (ipField === "all") {
     return (
       <div className="ip-card-info">
-        <IpCardInfo ip={ip}/>
+        <IpCardInfo ip={ip} saveToStorage={saveToStorage}/>
       </div>
     )
   } 

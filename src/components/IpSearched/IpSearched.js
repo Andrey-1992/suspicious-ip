@@ -17,11 +17,15 @@ const IpSearched = () => {
     .then(setIpAddress(ipAddress))
     .then(error => console.log(error))
   }
+
+  const saveToStorage = () => {
+    localStorage.setItem(requestIpInfo.ip, JSON.stringify(requestIpInfo))
+  }
   
   return  (
     <div className="ipInfo">
       <IpForm getRequestedIpInfo={getRequestedIpInfo}/>
-      {ipAddress && <IpCard ip={requestIpInfo} ipField={ipField} ipAddress={ipAddress}/>}
+      {ipAddress && <IpCard ip={requestIpInfo} ipField={ipField} ipAddress={ipAddress} saveToStorage={saveToStorage}/>}
     </div>
   )
 }
