@@ -12,7 +12,7 @@ const IpCard = ({ip, ipField, ipAddress, saveToStorage}) => {
     )
   } 
   return (
-    <IpCardField field={ipField}  ipField={ip[ipField]} ipAddress={ipAddress}/>
+    <IpCardField field={ipField}  ipField={ip[ipField]} ipAddress={ipAddress} saveToStorage={saveToStorage}/>
   )
 }
 

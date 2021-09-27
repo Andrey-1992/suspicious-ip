@@ -5,16 +5,16 @@ function Nav() {
   return (
     <div className="nav">
       <NavLink className='go-home' to="/">
-        <button className="nav-buttons">Home</button>
+        <p className="nav-buttons">Home</p>
       </NavLink>
       <NavLink className='go-local-ip' to="local-ip">
-        <button className="nav-buttons">Local IP</button>
+        <p className="nav-buttons">Local IP</p>
       </NavLink>
       <NavLink className='go-search-ip' to="/searched-ip">
-        <button className="nav-buttons">Search IP</button>
+        <p className="nav-buttons">Search IP</p>
       </NavLink>
       <NavLink className='go-saved-ips' to="/saved-ip">
-        <button className="nav-buttons">Saved IPs</button>
+        <p className="nav-buttons">Saved IPs</p>
       </NavLink>
     </div>
   );

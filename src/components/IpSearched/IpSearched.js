@@ -8,6 +8,7 @@ const IpSearched = () => {
   const [requestIpInfo, setRequestIpInfo] = useState({});
   const [ipAddress, setIpAddress] = useState("");
   const [ipField, setIpField] = useState("");
+  const [completedRequest, setCompletedRequest] = useState(false);
 
   
   const getRequestedIpInfo = (ipAddress, ipFieldInfo) => {
@@ -16,6 +17,10 @@ const IpSearched = () => {
     .then(setIpField(ipFieldInfo))
     .then(setIpAddress(ipAddress))
     .then(error => console.log(error))
+
+    if (!requestIpInfo) {
+      setCompletedRequest(true)
+    }
   }
 
   const saveToStorage = () => {
@@ -25,7 +30,8 @@ const IpSearched = () => {
   return  (
     <div className="ipInfo">
       <IpForm getRequestedIpInfo={getRequestedIpInfo}/>
-      {ipAddress && <IpCard ip={requestIpInfo} ipField={ipField} ipAddress={ipAddress} saveToStorage={saveToStorage}/>}
+       {ipAddress && <IpCard ip={requestIpInfo} ipField={ipField} ipAddress={ipAddress} saveToStorage={saveToStorage}/>}
+       {completedRequest && <h2 className="bad-ip-request">Please fill out all the required fields</h2>}
     </div>
   )
 }

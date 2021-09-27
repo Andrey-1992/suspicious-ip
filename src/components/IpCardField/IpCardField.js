@@ -2,7 +2,7 @@ import './IpCardField.css'
 import React from 'react';
 import Loader from '../Loader/Loader';
 
-const IpCardField = ({field, ipField, ipAddress}) => {
+const IpCardField = ({field, ipField, ipAddress, saveToStorage}) => {
   if (!field) {
     return (<Loader />)
   }
@@ -12,7 +12,7 @@ const IpCardField = ({field, ipField, ipAddress}) => {
       <h3>{field}:</h3>
       <h4>{ipField}</h4>
       <h4>IP #: {ipAddress}</h4>
-      <button className="saved-button-field">Save <i class="fas fa-hdd"></i></button>
+      <button className="saved-button-field" onClick={saveToStorage}>Save <i class="fas fa-hdd"></i></button>
     </div>
   );
 }
