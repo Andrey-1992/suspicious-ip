@@ -28,7 +28,7 @@ const IpContainer = () => {
   const createIpCards = (ipCardsData) => {
     const cardsContainer = ipCardsData.map(info => {
       return (
-        <IpSavedCard ip={info} deleteFromStorage={deleteFromStorage}/>
+        <IpSavedCard ip={info} deleteFromStorage={deleteFromStorage} key={info.ip}/>
        )
     })
     return (

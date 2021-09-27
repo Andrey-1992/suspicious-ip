@@ -33,7 +33,7 @@ const IpCardInfo = ({ip, saveToStorage}) => {
 }
 
 IpCardInfo.propTypes = {
-  ip: PropTypes.string,
+  ip: PropTypes.object,
   saveToStorage: PropTypes.func,
   Loader: PropTypes.element
 }

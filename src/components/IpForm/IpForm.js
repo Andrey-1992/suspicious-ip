@@ -34,6 +34,7 @@ const IpForm = ({getRequestedIpInfo}) => {
         name="ipAddress"
         value={ipAddress}
         onChange={(event) => setIpAddress(event.target.value)}
+        key={ipAddress + Date.now()}
       />
       <select onChange={(event) => setIpField(event.target.value)}>
         {ipFieldsContainer.map(list => (
